@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Página Web Kitty Code",
+    "category": "Desarrollo Web",
+    "description": "Creamos el sitio web oficial de Kitty Code con un diseño moderno y colores rosados pastel. Es un espacio donde mostramos nuestros servicios, equipo y contacto.",
+    "teamMembers": ["Besnaliz", "Tatiana", "Stefany"],
+    "impact": "Ayuda a que más personas conozcan nuestros proyectos y aprendan sobre programación."
+  },
+  {
+    "id": 2,
+    "title": "Formulario Interactivo en React",
+    "category": "Aplicación React",
+    "description": "Desarrollamos un formulario que guarda el nombre, correo y mensaje del usuario. Toda la información se muestra en consola para practicar estados y eventos.",
+    "teamMembers": ["Besnaliz", "Tatiana", "Stefany"],
+    "impact": "Permite mejorar la práctica en React y facilita la comunicación con los usuarios."
+  }
+]  

@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "HTML",
+    "nivel": 95,
+    "color": "bg-orange-400"
+  },
+  {
+    "nombre": "CSS",
+    "nivel": 90,
+    "color": "bg-blue-500"
+  },
+  {
+    "nombre": "JavaScript",
+    "nivel": 85,
+    "color": "bg-yellow-400"
+  },
+  {
+    "nombre": "React",
+    "nivel": 80,
+    "color": "bg-blue-300"
+  },
+  {
+    "nombre": "Tailwind CSS",
+    "nivel": 75,
+    "color": "bg-pink-400"
+  },
+  {
+    "nombre": "Git",
+    "nivel": 70,
+    "color": "bg-red-500"
+  },
+  {
+    "nombre": "Figma",
+    "nivel": 85,
+    "color": "bg-purple-400"
+  }
+]

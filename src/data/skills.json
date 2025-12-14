@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "category": "Frontend",
+    "skills": [
+      {
+        "name": "React",
+        "level": 90,
+        "description": "Construcción de interfaces dinámicas y reactivas con componentes reutilizables."
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": 95,
+        "description": "Lenguajes principales para desarrollo web moderno."
+      },
+      {
+        "name": "HTML5 & CSS3",
+        "level": 100,
+        "description": "Base de toda la estructura y estilos de aplicaciones web."
+      },
+      {
+        "name": "TailwindCSS",
+        "level": 85,
+        "description": "Framework CSS para diseño rápido y responsivo con clases utilitarias."
+      },
+      {
+        "name": "Next.js",
+        "level": 70,
+        "description": "Framework React para aplicaciones full-stack y renderizado en servidor."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Backend",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": 90,
+        "description": "Desarrollo de servidores y APIs eficientes con JavaScript."
+      },
+      {
+        "name": "Express.js",
+        "level": 85,
+        "description": "Framework para Node.js que facilita la creación de rutas y middlewares."
+      },
+      {
+        "name": "Python",
+        "level": 80,
+        "description": "Lenguaje versátil para backend, análisis de datos y automatización."
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 75,
+        "description": "Base de datos relacional potente y segura."
+      },
+      {
+        "name": "MongoDB",
+        "level": 70,
+        "description": "Base de datos NoSQL para almacenamiento flexible de datos."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Tools & DevOps",
+    "skills": [
+      {
+        "name": "Git & GitHub",
+        "level": 95,
+        "description": "Control de versiones y colaboración eficiente."
+      },
+      {
+        "name": "Docker",
+        "level": 80,
+        "description": "Contenerización de aplicaciones para un despliegue consistente."
+      },
+      {
+        "name": "AWS",
+        "level": 70,
+        "description": "Servicios en la nube para proyectos escalables."
+      },
+      {
+        "name": "VS Code",
+        "level": 100,
+        "description": "Editor de código eficiente con extensiones para desarrollo web."
+      },
+      {
+        "name": "Figma",
+        "level": 85,
+        "description": "Diseño de interfaces y prototipos visuales colaborativos."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Emerging Tech",
+    "skills": [
+      {
+        "name": "AI/ML",
+        "level": 60,
+        "description": "Inteligencia Artificial y Machine Learning para soluciones innovadoras."
+      },
+      {
+        "name": "Firebase",
+        "level": 70,
+        "description": "Backend en tiempo real para aplicaciones modernas."
+      },
+      {
+        "name": "Redis",
+        "level": 65,
+        "description": "Almacenamiento en memoria para caching y sistemas de alta velocidad."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Soft Skills",
+    "skills": [
+      {
+        "name": "Team Leadership",
+        "level": 90,
+        "description": "Capacidad de liderar equipos de manera eficiente y motivadora."
+      },
+      {
+        "name": "Communication",
+        "level": 95,
+        "description": "Habilidad para expresar ideas claras y facilitar la colaboración."
+      },
+      {
+        "name": "Problem Solving",
+        "level": 90,
+        "description": "Resolver problemas complejos con creatividad y lógica."
+      },
+      {
+        "name": "Creative Thinking",
+        "level": 85,
+        "description": "Aportar ideas innovadoras para mejorar productos y procesos."
+      }
+    ]
+  }
+]
