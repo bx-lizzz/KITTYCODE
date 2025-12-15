@@ -1,26 +1,26 @@
-// Import the functions you need from the SDKs you need
+// src/firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Configuración de tu proyecto Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDrMgrKVoRrmvao4QSy-3-T896n6VFNNDQ",
-  authDomain: "mi-app-holi.firebaseapp.com",
-  projectId: "mi-app-holi",
-  storageBucket: "mi-app-holi.firebasestorage.app",
-  messagingSenderId: "511502008091",
-  appId: "1:511502008091:web:81f58b34becc38e82f9dbe"
+  apiKey: "AIzaSyAzYK2G8yowlacbFnoKC436DfHmssRzxvE",
+  authDomain: "kittycode-91fc2.firebaseapp.com",
+  projectId: "kittycode-91fc2",
+  storageBucket: "kittycode-91fc2.appspot.com",
+  messagingSenderId: "414720487681",
+  appId: "1:414720487681:web:5dfadac553217436eeeb00"
 };
 
-// Initialize Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 
-// Export Auth
+// Exporta Auth, Firestore y proveedor de Google
 export const auth = getAuth(app);
-
-// Export Firestore
 export const db = getFirestore(app);
+export const googleProvider = new GoogleAuthProvider();
 
-// Default export
+// Export default app (opcional)
 export default app;
+

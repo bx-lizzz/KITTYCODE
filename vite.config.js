@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // Configuración de Vite + Tailwind + React
 export default defineConfig({
-  base: '/Proyecto-Final-U3/', // <--- Clave para que GitHub Pages cargue correctamente
+  base: '/KITTYCODE/', // <--- Clave para que GitHub Pages cargue correctamente
   plugins: [react(), tailwindcss()],
 });
 

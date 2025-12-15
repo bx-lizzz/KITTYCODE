@@ -70,7 +70,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/Proyecto-Final-U3">
+    <Router basename="/KITTYCODE/">
       <Layout>
         <Routes>
           {/* Páginas principales */}
@@ -84,9 +84,16 @@ function App() {
 
           {/* Dashboards */}
           <Route path="/dashboard" element={<DashboardPage />} />
+
           <Route path="/dashboard/admin" element={<Dashboard />} />
           <Route path="/dashboard/miembro" element={<MemberDashboard />} />
           <Route path="/dashboard/cliente" element={<DashboardCliente />} />
+
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/MemberDashboard" element={<MemberDashboard />} />
+          <Route path="/DashboardCliente" element={<DashboardCliente />} />
+          
+          <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>
