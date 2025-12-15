@@ -6,24 +6,30 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   const navigation = [
+    { name: "Kitty Code", href: "/kittycode" },
     { name: "Inicio", href: "/" },
     { name: "Nosotras", href: "/nosotras" },
     { name: "Portafolio", href: "/portfolio" },
     { name: "Habilidades", href: "/habilidades" },
     { name: "Contacto", href: "/contacto" },
-    // 🌸 Agregado aquí:
     { name: "Dashboard", href: "/dashboard" },
   ];
 
-  const isActive = (path) => location.pathname === path;
+  // ✅ CORRECCIÓN IMPORTANTE PARA GITHUB PAGES / BASENAME
+  const isActive = (path) => {
+    if (path === "/") {
+      return location.pathname === "/" || location.pathname.endsWith("/");
+    }
+    return location.pathname.endsWith(path);
+  };
 
   return (
-    <div className="min-h-screen bg-pink-50 transition-colors duration-500">
-      {/* Header */}
+    <div className="min-h-screen bg-pink-50 transition-colors duration-500 flex flex-col">
+      {/* HEADER */}
       <header className="bg-white shadow-md sticky top-0 z-50 transition-colors duration-500">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            {/* Logo */}
+            {/* LOGO */}
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-rose-400 rounded-lg flex items-center justify-center">
@@ -35,7 +41,7 @@ const Layout = ({ children }) => {
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* NAV DESKTOP */}
             <div className="hidden md:flex items-center space-x-8">
               {navigation.map((item) => (
                 <Link
@@ -52,7 +58,7 @@ const Layout = ({ children }) => {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* BOTÓN MENÚ MOBILE */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -84,10 +90,10 @@ const Layout = ({ children }) => {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
+          {/* NAV MOBILE */}
           {isMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -108,15 +114,16 @@ const Layout = ({ children }) => {
         </nav>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-1 transition-colors duration-500">{children}</main>
+      {/* CONTENIDO */}
+      <main className="flex-1 transition-colors duration-500">
+        {children}
+      </main>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="bg-pink-500 text-white py-10 mt-12 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Logo y descripción */}
-            <div className="col-span-1 md:col-span-2">
+            <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-3">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                   <span className="text-pink-500 text-lg">🐾</span>
@@ -125,36 +132,22 @@ const Layout = ({ children }) => {
                   Kitty Code
                 </span>
               </div>
-              <p className="text-pink-50 mb-3 text-sm leading-relaxed">
+              <p className="text-pink-50 text-sm leading-relaxed">
                 Somos Kitty Code, un grupo donde integramos el arte y la
                 computación creando diseños web únicos con estilo propio y
                 dinámico. Cada línea de código lleva un toque de creatividad y
                 corazón 💕.
               </p>
-              <div className="flex space-x-4 text-lg">
-                <a href="#" className="hover:text-white/80 transition-colors">
-                  🐱
-                </a>
-                <a href="#" className="hover:text-white/80 transition-colors">
-                  💻
-                </a>
-                <a href="#" className="hover:text-white/80 transition-colors">
-                  ✨
-                </a>
-              </div>
             </div>
 
-            {/* Enlaces rápidos */}
             <div>
-              <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide">
-                Enlaces
-              </h4>
+              <h4 className="font-semibold mb-3 text-sm uppercase">Enlaces</h4>
               <ul className="space-y-1">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.href}
-                      className="text-pink-50 hover:text-white transition-colors text-sm"
+                      className="text-pink-50 hover:text-white text-sm"
                     >
                       {item.name}
                     </Link>
@@ -163,11 +156,8 @@ const Layout = ({ children }) => {
               </ul>
             </div>
 
-            {/* Contacto */}
             <div>
-              <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide">
-                Contacto
-              </h4>
+              <h4 className="font-semibold mb-3 text-sm uppercase">Contacto</h4>
               <ul className="space-y-1 text-pink-50 text-sm">
                 <li>📧 hola@kittycode.dev</li>
                 <li>💖 proyectos@kittycode.dev</li>
@@ -180,9 +170,6 @@ const Layout = ({ children }) => {
             <p className="text-pink-50 text-sm">
               © 2025 Kitty Code 🐾 | Todos los derechos reservados.
             </p>
-            <p className="text-xs text-pink-100 mt-1">
-              “Donde el arte y el código se unen con amor y creatividad.” 💗
-            </p>
           </div>
         </div>
       </footer>
@@ -191,4 +178,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-

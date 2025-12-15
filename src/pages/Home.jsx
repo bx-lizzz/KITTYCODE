@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import teamData from "../data/team.json";
+
 
 const Home = () => {
   const [stats, setStats] = useState(null);
